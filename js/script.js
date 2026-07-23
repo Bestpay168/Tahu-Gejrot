@@ -688,6 +688,202 @@ console.log("Slider Active");
 
 );
 
+/* ==========================================
+   SCRIPT.JS
+   BAGIAN 5D
+   GALLERY + MOBILE MENU + FINAL
+========================================== */
+
+
+/* ======================================
+   GALLERY LIGHTBOX
+====================================== */
+
+const galleryImages =
+document.querySelectorAll(".gallery-grid img");
+
+if(galleryImages.length){
+
+const lightbox=document.createElement("div");
+
+lightbox.className="lightbox";
+
+lightbox.innerHTML=`
+<span class="close-lightbox">&times;</span>
+<img class="lightbox-image">
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImg=
+lightbox.querySelector(".lightbox-image");
+
+galleryImages.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.classList.add("show");
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.classList.remove("show");
+
+});
+
+}
+
+
+/* ======================================
+   MOBILE MENU
+====================================== */
+
+const nav=document.querySelector("nav");
+
+const menuButton=document.createElement("div");
+
+menuButton.className="menu-toggle";
+
+menuButton.innerHTML="☰";
+
+document.querySelector(".nav").appendChild(menuButton);
+
+menuButton.addEventListener("click",()=>{
+
+nav.classList.toggle("mobile-active");
+
+menuButton.classList.toggle("open");
+
+});
+
+
+/* ======================================
+   CLOSE MENU
+====================================== */
+
+document.querySelectorAll("nav a")
+
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+nav.classList.remove("mobile-active");
+
+menuButton.classList.remove("open");
+
+});
+
+});
+
+
+/* ======================================
+   HEADER HIDE
+====================================== */
+
+let lastScroll=0;
+
+window.addEventListener("scroll",()=>{
+
+const current=window.pageYOffset;
+
+if(current>lastScroll && current>150){
+
+document.querySelector(".header")
+
+.style.top="-90px";
+
+}else{
+
+document.querySelector(".header")
+
+.style.top="0";
+
+}
+
+lastScroll=current;
+
+});
+
+
+/* ======================================
+   RIPPLE EFFECT
+====================================== */
+
+document.querySelectorAll(
+
+".btn1,.btn2,.btn-order"
+
+).forEach(button=>{
+
+button.addEventListener("click",(e)=>{
+
+const ripple=document.createElement("span");
+
+ripple.className="ripple";
+
+const rect=button.getBoundingClientRect();
+
+ripple.style.left=
+(e.clientX-rect.left)+"px";
+
+ripple.style.top=
+(e.clientY-rect.top)+"px";
+
+button.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+
+/* ======================================
+   RANDOM HERO TEXT
+====================================== */
+
+const slogan=[
+
+"Pedas • Segar • Bikin Nagih",
+
+"Resep Khas Cirebon",
+
+"Fresh Setiap Hari",
+
+"Bumbu Racikan Premium"
+
+];
+
+const heroText=document.querySelector(".hero p");
+
+if(heroText){
+
+setInterval(()=>{
+
+const random=Math.floor(
+
+Math.random()*slogan.length
+
+);
+
+heroText.innerHTML=slogan[random];
+
+},5000);
+
+}
+
+
+
+
 
 /* ======================================
    INIT
@@ -700,4 +896,235 @@ updateHero();
 /* ======================================
    END BAGIAN 5C
 ====================================== */
+/* ==========================================
+   SCRIPT.JS
+   BAGIAN 5D
+   GALLERY + MOBILE MENU + FINAL
+========================================== */
+
+
+/* ======================================
+   GALLERY LIGHTBOX
+====================================== */
+
+const galleryImages =
+document.querySelectorAll(".gallery-grid img");
+
+if(galleryImages.length){
+
+const lightbox=document.createElement("div");
+
+lightbox.className="lightbox";
+
+lightbox.innerHTML=`
+<span class="close-lightbox">&times;</span>
+<img class="lightbox-image">
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImg=
+lightbox.querySelector(".lightbox-image");
+
+galleryImages.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.classList.add("show");
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.classList.remove("show");
+
+});
+
+}
+
+
+/* ======================================
+   MOBILE MENU
+====================================== */
+
+const nav=document.querySelector("nav");
+
+const menuButton=document.createElement("div");
+
+menuButton.className="menu-toggle";
+
+menuButton.innerHTML="☰";
+
+document.querySelector(".nav").appendChild(menuButton);
+
+menuButton.addEventListener("click",()=>{
+
+nav.classList.toggle("mobile-active");
+
+menuButton.classList.toggle("open");
+
+});
+
+
+/* ======================================
+   CLOSE MENU
+====================================== */
+
+document.querySelectorAll("nav a")
+
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+nav.classList.remove("mobile-active");
+
+menuButton.classList.remove("open");
+
+});
+
+});
+
+
+/* ======================================
+   HEADER HIDE
+====================================== */
+
+let lastScroll=0;
+
+window.addEventListener("scroll",()=>{
+
+const current=window.pageYOffset;
+
+if(current>lastScroll && current>150){
+
+document.querySelector(".header")
+
+.style.top="-90px";
+
+}else{
+
+document.querySelector(".header")
+
+.style.top="0";
+
+}
+
+lastScroll=current;
+
+});
+
+
+/* ======================================
+   RIPPLE EFFECT
+====================================== */
+
+document.querySelectorAll(
+
+".btn1,.btn2,.btn-order"
+
+).forEach(button=>{
+
+button.addEventListener("click",(e)=>{
+
+const ripple=document.createElement("span");
+
+ripple.className="ripple";
+
+const rect=button.getBoundingClientRect();
+
+ripple.style.left=
+(e.clientX-rect.left)+"px";
+
+ripple.style.top=
+(e.clientY-rect.top)+"px";
+
+button.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+
+/* ======================================
+   RANDOM HERO TEXT
+====================================== */
+
+const slogan=[
+
+"Pedas • Segar • Bikin Nagih",
+
+"Resep Khas Cirebon",
+
+"Fresh Setiap Hari",
+
+"Bumbu Racikan Premium"
+
+];
+
+const heroText=document.querySelector(".hero p");
+
+if(heroText){
+
+setInterval(()=>{
+
+const random=Math.floor(
+
+Math.random()*slogan.length
+
+);
+
+heroText.innerHTML=slogan[random];
+
+},5000);
+
+}
+
+
+/* ======================================
+   LAZY IMAGE
+====================================== */
+
+document.querySelectorAll("img")
+
+.forEach(img=>{
+
+img.loading="lazy";
+
+});
+
+
+/* ======================================
+   COPYRIGHT
+====================================== */
+
+const year=new Date().getFullYear();
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.innerHTML=
+
+`© ${year} TAHU GEJROT PAKDE BURUNG`;
+
+}
+
+
+/* ======================================
+   FINISH
+====================================== */
+
+console.log(
+"TAHU GEJROT PAKDE BURUNG WEBSITE READY"
+);
 
