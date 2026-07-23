@@ -1556,6 +1556,35 @@ box-shadow:var(--shadow);
 }
 
 
+.hero{
+    transition:
+    background-image .8s ease,
+    opacity .4s ease;
+}
+
+.hero-dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:35px;
+}
+
+.hero-dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:white;
+    opacity:.5;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-dot.active{
+    opacity:1;
+    background:#ff9800;
+    transform:scale(1.2);
+}
+
 /*==============================
 END STYLE.CSS
 ==============================*/
