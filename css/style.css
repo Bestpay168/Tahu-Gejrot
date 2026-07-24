@@ -514,14 +514,10 @@ MENU
 }
 
 .card img{
-
     width:100%;
-
-    height:250px;
-
-    object-fit:cover;
-
-    transition:.5s;
+    height:300px;
+    object-fit:contain;
+    background:#fff;
 
 }
 
