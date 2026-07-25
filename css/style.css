@@ -1007,9 +1007,9 @@ WHATSAPP FLOATING
 
     bottom:25px;
 
-    width:70px;
+    width:65px;
 
-    height:70px;
+    height:65px;
 
     background:#25D366;
 
@@ -1024,7 +1024,7 @@ WHATSAPP FLOATING
     z-index:9999;
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
+    0 15px 35px rgba(0,0,0,.3);
 
     animation:waFloat 2.5s infinite;
 
@@ -1039,9 +1039,9 @@ WHATSAPP FLOATING
 }
 
 .wa img{
-
-    width:38px;
-
+    width: 34px;
+    height: 34px;
+    display: block;
 }
 
 
