@@ -120,7 +120,7 @@ HEADER
 }
 
 .burger{
-    display:flex;
+    display:none;
 
     width:45px;
     height:45px;
@@ -196,7 +196,7 @@ HEADER
 }
 
 .burger{
-    display:flex;
+    display:none;
 }
 
 }
