@@ -77,100 +77,127 @@ HEADER
     top:0;
     left:0;
     width:100%;
-    background:rgba(30,30,30,.92);
-    backdrop-filter:blur(10px);
-    z-index:999;
-}
-.nav{
+    height:70px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:20px;
-    min-height:80px;
-}
 
-/* LOGO */
+    padding:0 20px;
+
+    background:#1d1d1d;
+
+    z-index:999;
+}
 
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    flex-shrink:0;
+    gap:10px;
 }
 
 .logo img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
+    width:45px;
 }
+
 .logo h2{
-    margin:0;
-    color:#fff;
-    font-size:20px;
-    line-height:1.1;
-    font-weight:700;
+    color:white;
+    font-size:18px;
 }
 
 .logo span{
     color:#ff9800;
 }
 
-nav ul li a{
+.navbar{
+    display:flex;
+    gap:30px;
+}
 
-color:white;
+.navbar a{
+    color:white;
+    text-decoration:none;
+}
 
-font-weight:500;
+.burger{
+    display:none;
 
-transition:.3s;
+    width:45px;
+    height:45px;
 
-position:relative;
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:28px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:998;
+}
+
+.overlay.show{
+    opacity:1;
+    visibility:visible;
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    right:-280px;
+
+    width:260px;
+    height:100vh;
+
+    background:#222;
+
+    display:flex;
+    flex-direction:column;
+
+    padding-top:90px;
+
+    transition:.35s;
+
+    z-index:999;
+}
+
+.navbar.active{
+    right:0;
+}
+
+.navbar a{
+
+    padding:18px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-nav ul li a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-8px;
-
-width:0;
-
-height:3px;
-
-background:var(--secondary);
-
-transition:.4s;
-
+.burger{
+    display:flex;
 }
-
-nav ul li a:hover::after{
-
-width:100%;
-
-}
-
-nav ul li a:hover{
-
-color:var(--secondary);
-
-}
-
-/* BUTTON */
-
-.btn-order{
-    width:auto;
-    display:inline-flex;
-}
-
-.btn-order:hover{
-
-    background:#e68900;
-
-    transform:translateY(-2px);
 
 }
 
