@@ -87,7 +87,7 @@ HEADER
 
     background:#1d1d1d;
 
-    z-index:999;
+    z-index:9;
 }
 
 .logo{
@@ -151,7 +151,7 @@ HEADER
 
     transition:.3s;
 
-    z-index:998;
+    z-index:8;
 }
 
 .overlay.show{
@@ -180,7 +180,7 @@ HEADER
 
     transition:.35s;
 
-    z-index:999;
+    z-index:9;
 }
 
 .navbar.active{
