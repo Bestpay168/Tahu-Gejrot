@@ -951,7 +951,7 @@ lightbox.classList.remove("show");
    MOBILE MENU
 ====================================== */
 
-const nav=document.querySelector("nav");
+const nav=document.querySelector("navbar");
 
 const menuButton=document.createElement("div");
 
@@ -974,7 +974,7 @@ menuButton.classList.toggle("open");
    CLOSE MENU
 ====================================== */
 
-document.querySelectorAll("nav a")
+document.querySelectorAll("navbar")
 
 .forEach(link=>{
 
