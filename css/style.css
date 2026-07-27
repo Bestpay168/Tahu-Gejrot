@@ -151,7 +151,7 @@ HEADER
 
     transition:.3s;
 
-    z-index:999;
+    z-index:998;
 }
 
 .menu-overlay.show{
@@ -180,7 +180,7 @@ HEADER
 
     transition:.35s;
 
-    z-index:998;
+    z-index:999;
 }
 
 .navbar.active{
@@ -197,6 +197,7 @@ HEADER
 
 .burger{
     display:none;
+    z-index:10001
 }
 
 }
@@ -218,7 +219,7 @@ align-items:center;
 justify-content:center;
 
 text-align:center;
-
+z-1ndex:1
 background:url("../banner.png") center center/cover no-repeat;
 
 }
@@ -238,7 +239,7 @@ width:100%;
 height:100%;
 
 background:rgba(0,0,0,.20);
-
+z-index:2
 }
 
 /* HERO CONTENT */
@@ -247,7 +248,7 @@ background:rgba(0,0,0,.20);
 
 position:relative;
 
-z-index:10;
+z-index:3;
 
 max-width:850px;
 
