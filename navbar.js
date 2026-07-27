@@ -1,11 +1,11 @@
 const burger = document.getElementById("burger");
 const navbar = document.getElementById("navbar");
-const overlay = document.getElementById("overlay");
+const overlay = document.getElementById("menuOverlay");
 
 burger.onclick = () => {
 
     navbar.classList.toggle("active");
-    overlay.classList.toggle("show");
+    menu-overlay.classList.toggle("show");
 
     if(navbar.classList.contains("active")){
         burger.innerHTML = "✕";
@@ -15,7 +15,7 @@ burger.onclick = () => {
 
 };
 
-overlay.onclick = () => {
+menu-overlay.onclick = () => {
 
     navbar.classList.remove("active");
     overlay.classList.remove("show");
