@@ -260,8 +260,8 @@ section h2{
 
 .
 
-navbar.active{
-    display:block;
+.navbar.active{
+    display:flex;
     flex-direction:column;
     padding:15px 0;
 }
