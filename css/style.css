@@ -180,7 +180,7 @@ HEADER
 
     transition:.35s;
 
-    z-index:999;
+    z-index:10001;
 }
 
 .navbar.active{
