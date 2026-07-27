@@ -18,7 +18,7 @@ burger.onclick = () => {
 menu-overlay.onclick = () => {
 
     navbar.classList.remove("active");
-    overlay.classList.remove("show");
+    menu-overlay.classList.remove("show");
     burger.innerHTML = "☰";
 
 };
