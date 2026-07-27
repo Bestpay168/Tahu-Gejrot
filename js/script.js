@@ -736,7 +736,7 @@ lightbox.classList.remove("show");
 
 });
 
-}
+});
 
 
 /* ======================================
@@ -784,9 +784,9 @@ document.querySelectorAll("#navbar a").forEach(link => {
             overlay.classList.remove("show");
         }
 
-    }
+    });
 
-}
+});
 
 if (overlay) {
 
@@ -796,9 +796,9 @@ if (overlay) {
         burger.classList.remove("open");
         menu-overlay.classList.remove("show");
 
-    }
+    });
 
-}
+});
 
 
 /* ======================================
@@ -909,162 +909,6 @@ heroText.innerHTML=slogan[random];
    INIT
 ====================================== */
 
-changeHero(currentHero);
-
-updateHero();
-
-/* ======================================
-   END BAGIAN 5C
-====================================== */
-/* ==========================================
-   SCRIPT.JS
-   BAGIAN 5D
-   GALLERY + MOBILE MENU + FINAL
-========================================== */
-
-
-/* ======================================
-   GALLERY LIGHTBOX
-====================================== */
-
-const galleryImages =
-document.querySelectorAll(".gallery-grid img");
-
-if(galleryImages.length){
-
-const lightbox=document.createElement("div");
-
-lightbox.className="lightbox";
-
-lightbox.innerHTML=`
-<span class="close-lightbox">&times;</span>
-<img class="lightbox-image">
-`;
-
-document.body.appendChild(lightbox);
-
-const lightboxImg=
-lightbox.querySelector(".lightbox-image");
-
-galleryImages.forEach(img=>{
-
-img.addEventListener("click",()=>{
-
-lightbox.classList.add("show");
-
-lightboxImg.src=img.src;
-
-}
-
-}
-
-lightbox.addEventListener("click",()=>{
-
-lightbox.classList.remove("show");
-
-}
-
-}
-
-/* ======================================
-   HEADER HIDE
-====================================== */
-
-let lastScroll=0;
-
-window.addEventListener("scroll",()=>{
-
-const current=window.pageYOffset;
-
-if(current>lastScroll && current>150){
-
-document.querySelector(".header")
-
-.style.top="-90px";
-
-}else{
-
-document.querySelector(".header")
-
-.style.top="0";
-
-}
-
-lastScroll=current;
-
-});
-
-
-/* ======================================
-   RIPPLE EFFECT
-====================================== */
-
-document.querySelectorAll(
-
-".btn1,.btn2,.btn-order"
-
-).forEach(button=>{
-
-button.addEventListener("click",(e)=>{
-
-const ripple=document.createElement("span");
-
-ripple.className="ripple";
-
-const rect=button.getBoundingClientRect();
-
-ripple.style.left=
-(e.clientX-rect.left)+"px";
-
-ripple.style.top=
-(e.clientY-rect.top)+"px";
-
-button.appendChild(ripple);
-
-setTimeout(()=>{
-
-ripple.remove();
-
-},600);
-
-});
-
-});
-
-
-/* ======================================
-   RANDOM HERO TEXT
-====================================== */
-
-const slogan=[
-
-"Pedas • Segar • Bikin Nagih",
-
-"Resep Khas Cirebon",
-
-"Fresh Setiap Hari",
-
-"Bumbu Racikan Premium"
-
-];
-
-const heroText=document.querySelector(".hero p");
-
-if(heroText){
-
-setInterval(()=>{
-
-const random=Math.floor(
-
-Math.random()*slogan.length
-
-);
-
-heroText.innerHTML=slogan[random];
-
-},5000);
-
-}
 
 
 /* ======================================
