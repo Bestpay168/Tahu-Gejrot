@@ -219,7 +219,7 @@ align-items:center;
 justify-content:center;
 
 text-align:center;
-z-1ndex:1
+
 background:url("../banner.png") center center/cover no-repeat;
 
 }
@@ -239,7 +239,6 @@ width:100%;
 height:100%;
 
 background:rgba(0,0,0,.20);
-z-index:2
 }
 
 /* HERO CONTENT */
@@ -248,7 +247,7 @@ z-index:2
 
 position:relative;
 
-z-index:3;
+z-index:10;
 
 max-width:850px;
 
