@@ -169,10 +169,10 @@ body{
     overflow-x:hidden;
 }
 
-@media (max-width:767px){
+@media (max-width:768px){
 
     .burger{
-        display:block;
+        display:none;
         z-index:10002;
     }
 
@@ -183,7 +183,7 @@ body{
         width:260px;
         height:100vh;
         background:#222;
-        display:none;
+        display:flex;
         flex-direction:column;
         padding-top:90px;
         transition:.35s;
@@ -192,7 +192,7 @@ body{
     }
 
     .navbar.active{
-        display:flex
+        
     }
 
 }
