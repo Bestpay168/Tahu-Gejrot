@@ -5,7 +5,7 @@ const overlay = document.getElementById("menuOverlay");
 burger.onclick = () => {
 
     navbar.classList.toggle("active");
-    menu-overlay.classList.toggle("show");
+    overlay.classList.toggle("show");
 
     if(navbar.classList.contains("active")){
         burger.innerHTML = "✕";
@@ -15,10 +15,10 @@ burger.onclick = () => {
 
 };
 
-menu-overlay.onclick = () => {
+    overlay.onclick = () => {
 
     navbar.classList.remove("active");
-    menu-overlay.classList.remove("show");
+    overlay.classList.remove("show");
     burger.innerHTML = "☰";
 
 };
