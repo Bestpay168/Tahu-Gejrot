@@ -743,23 +743,30 @@ lightbox.classList.remove("show");
    MOBILE MENU
 ====================================== */
 
-const nav=document.querySelector("nav");
+const burger = document.getElementById("burger");
+const navbar = document.getElementById("navbar");
+const overlay = document.getElementById("menuOverlay");
 
-const menuButton=document.createElement("div");
+burger.onclick = () => {
 
-menuButton.className="menu-toggle";
+    navbar.classList.toggle("active");
+    menu-overlay.classList.toggle("show");
 
-menuButton.innerHTML="☰";
+    if(navbar.classList.contains("active")){
+        burger.innerHTML = "✕";
+    }else{
+        burger.innerHTML = "☰";
+    }
 
-document.querySelector(".nav").appendChild(menuButton);
+};
 
-menuButton.addEventListener("click",()=>{
+menu-overlay.onclick = () => {
 
-nav.classList.toggle("mobile-active");
+    navbar.classList.remove("active");
+    menu-overlay.classList.remove("show");
+    burger.innerHTML = "☰";
 
-menuButton.classList.toggle("open");
-
-});
+};
 
 
 /* ======================================
@@ -951,23 +958,30 @@ lightbox.classList.remove("show");
    MOBILE MENU
 ====================================== */
 
-const nav=document.querySelector("navbar");
+const burger = document.getElementById("burger");
+const navbar = document.getElementById("navbar");
+const overlay = document.getElementById("menuOverlay");
 
-const menuButton=document.createElement("div");
+burger.onclick = () => {
 
-menuButton.className="menu-toggle";
+    navbar.classList.toggle("active");
+    menu-overlay.classList.toggle("show");
 
-menuButton.innerHTML="☰";
+    if(navbar.classList.contains("active")){
+        burger.innerHTML = "✕";
+    }else{
+        burger.innerHTML = "☰";
+    }
 
-document.querySelector(".nav").appendChild(menuButton);
+};
 
-menuButton.addEventListener("click",()=>{
+menu-overlay.onclick = () => {
 
-nav.classList.toggle("mobile-active");
+    navbar.classList.remove("active");
+    menu-overlay.classList.remove("show");
+    burger.innerHTML = "☰";
 
-menuButton.classList.toggle("open");
-
-});
+};
 
 
 /* ======================================
