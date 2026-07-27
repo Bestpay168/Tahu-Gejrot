@@ -84,10 +84,13 @@ HEADER
     align-items:center;
 
     padding:0 20px;
+    box-sizing:border-box;
 
     background:#1d1d1d;
 
     z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 .logo{
@@ -101,7 +104,7 @@ HEADER
 }
 
 .logo h2{
-    color:white;
+    color:#fff;
     font-size:18px;
 }
 
@@ -111,29 +114,33 @@ HEADER
 
 .navbar{
     display:flex;
+    align-items:center;
     gap:30px;
 }
 
-.navbar a{
-    color:white;
+  .navbar a{
+   display:flex;
+    color:#fff;
     text-decoration:none;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#ff9800;
 }
 
 .burger{
-    display:flex;
+    display:none;
 
     width:45px;
     height:45px;
 
     border-radius:50%;
-
     background:#ff9800;
 
-    color:white;
-
+    color:#fff;
     font-size:28px;
 
-    display:flex;
     justify-content:center;
     align-items:center;
 
@@ -158,40 +165,39 @@ HEADER
     opacity:1;
     visibility:visible;
 }
-
-@media(max-width:768px){
-
-.navbar{
-
-    position:fixed;
-
-    top:0;
-    right:-280px;
-
-    width:260px;
-    height:100vh;
-    background: #222;
-    display:flex;
-    flex-direction:column;
-
-    padding-top:90px;
-
-    transition:.35s;
-
-    z-index:10001;
+body{
+    overflow-x:hidden;
 }
 
-.navbar.active{
-    right:0;
+@media (max-width:768px){
+
+    .burger{
+        display:flex;
+        z-index:10002;
+    }
+
+    .navbar{
+        position:fixed;
+        top:0;
+        right:-280px;
+        width:260px;
+        height:100vh;
+        background:#222;
+        display:flex;
+        flex-direction:column;
+        padding-top:90px;
+        transition:.35s;
+        z-index:10001;
+        box-shadow:-8px 0 20px rgba(0,0,0,.25);
+    }
+
+    .navbar.active{
+        right:0;
+    }
+
 }
 
-.navbar a{
 
-    padding:18px 30px;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
 
 /* ==================================
 HERO
