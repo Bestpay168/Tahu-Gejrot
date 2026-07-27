@@ -250,15 +250,15 @@ section h2{
 }
 
 .navbar{
-    position:absolute;
-    top:80px;
+    position:fixed;
+    top:70px;
     left:0;
     width:100%;
     display:none;
     background:#222;
 }
 
-.
+
 
 .navbar.active{
     display:flex;
