@@ -750,7 +750,7 @@ const overlay = document.getElementById("menuOverlay");
 burger.onclick = () => {
 
     navbar.classList.toggle("active");
-    menu-overlay.classList.toggle("show");
+    overlay.classList.toggle("show");
 
     if(navbar.classList.contains("active")){
         burger.innerHTML = "✕";
@@ -760,10 +760,10 @@ burger.onclick = () => {
 
 };
 
-menu-overlay.onclick = () => {
+    overlay.onclick = () => {
 
     navbar.classList.remove("active");
-    menu-overlay.classList.remove("show");
+    overlay.classList.remove("show");
     burger.innerHTML = "☰";
 
 };
@@ -777,26 +777,26 @@ document.querySelectorAll("#navbar a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navbar.classList.remove("mobile-active");
-        burger.classList.remove("open");
+        navbar.classList.remove("active");
+        burger.classList.remove("show");
 
         if (overlay) {
-            menu-overlay.classList.remove("show");
+            overlay.classList.remove("show");
         }
 
-    });
+    }
 
-});
+}
 
-if (menu-overlay) {
+if (overlay) {
 
-    menu-overlay.addEventListener("click", () => {
+    overlay.addEventListener("click", () => {
 
         navbar.classList.remove("mobile-active");
         burger.classList.remove("open");
         menu-overlay.classList.remove("show");
 
-    });
+    }
 
 }
 
@@ -954,81 +954,17 @@ lightbox.classList.add("show");
 
 lightboxImg.src=img.src;
 
-});
+}
 
-});
+}
 
 lightbox.addEventListener("click",()=>{
 
 lightbox.classList.remove("show");
 
-});
-
 }
 
-
-/* ======================================
-   MOBILE MENU
-====================================== */
-
-const burger = document.getElementById("burger");
-const navbar = document.getElementById("navbar");
-const overlay = document.getElementById("menuOverlay");
-
-burger.onclick = () => {
-
-    navbar.classList.toggle("active");
-    menu-overlay.classList.toggle("show");
-
-    if(navbar.classList.contains("active")){
-        burger.innerHTML = "✕";
-    }else{
-        burger.innerHTML = "☰";
-    }
-
-};
-
-menu-overlay.onclick = () => {
-
-    navbar.classList.remove("active");
-    menu-overlay.classList.remove("show");
-    burger.innerHTML = "☰";
-
-};
-
-
-/* ======================================
-   CLOSE MENU
-====================================== */
-
-document.querySelectorAll("#navbar a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navbar.classList.remove("mobile-active");
-        burger.classList.remove("open");
-
-        if (overlay) {
-            menu-overlay.classList.remove("show");
-        }
-
-    });
-
-});
-
-if (menu-overlay) {
-
-    menu-overlay.addEventListener("click", () => {
-
-        navbar.classList.remove("mobile-active");
-        burger.classList.remove("open");
-        menu-overlay.classList.remove("show");
-
-    });
-
 }
-});
-
 
 /* ======================================
    HEADER HIDE
