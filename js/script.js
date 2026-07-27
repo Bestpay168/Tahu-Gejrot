@@ -773,19 +773,32 @@ menu-overlay.onclick = () => {
    CLOSE MENU
 ====================================== */
 
-document.querySelectorAll("nav a")
+document.querySelectorAll("#navbar a").forEach(link => {
 
-.forEach(link=>{
+    link.addEventListener("click", () => {
 
-link.addEventListener("click",()=>{
+        navbar.classList.remove("mobile-active");
+        burger.classList.remove("open");
 
-nav.classList.remove("mobile-active");
+        if (overlay) {
+            menu-overlay.classList.remove("show");
+        }
 
-menuButton.classList.remove("open");
+    });
 
 });
 
-});
+if (menu-overlay) {
+
+    menu-overlay.addEventListener("click", () => {
+
+        navbar.classList.remove("mobile-active");
+        burger.classList.remove("open");
+        menu-overlay.classList.remove("show");
+
+    });
+
+}
 
 
 /* ======================================
@@ -988,18 +1001,32 @@ menu-overlay.onclick = () => {
    CLOSE MENU
 ====================================== */
 
-document.querySelectorAll("navbar")
+document.querySelectorAll("#navbar a").forEach(link => {
 
-.forEach(link=>{
+    link.addEventListener("click", () => {
 
-link.addEventListener("click",()=>{
+        navbar.classList.remove("mobile-active");
+        burger.classList.remove("open");
 
-nav.classList.remove("mobile-active");
+        if (overlay) {
+            menu-overlay.classList.remove("show");
+        }
 
-menuButton.classList.remove("open");
+    });
 
 });
 
+if (menu-overlay) {
+
+    menu-overlay.addEventListener("click", () => {
+
+        navbar.classList.remove("mobile-active");
+        burger.classList.remove("open");
+        menu-overlay.classList.remove("show");
+
+    });
+
+}
 });
 
 
