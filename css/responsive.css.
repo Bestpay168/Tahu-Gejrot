@@ -245,11 +245,11 @@ section h2{
 
 @media (max-width:768px){
 
-.menu-toggle{
+.burger{
     display:block;
 }
 
-nav{
+navbar{
     position:absolute;
     top:80px;
     left:0;
@@ -258,11 +258,8 @@ nav{
     background:#222;
 }
 
-nav.active{
+navbar.active{
     display:block;
-}
-
-nav ul{
     flex-direction:column;
     padding:15px 0;
 }
