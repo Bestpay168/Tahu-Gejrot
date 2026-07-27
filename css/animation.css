@@ -578,7 +578,7 @@ display:none;
 
 .navbar.active{
 
-display:block;
+display:flex;
 
 width:100%;
 
