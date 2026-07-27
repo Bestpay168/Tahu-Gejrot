@@ -550,9 +550,9 @@ cursor:pointer;
 MOBILE MENU
 ==========================*/
 
-.menu-toggle{
+.burger{
 
-display:none;
+display:block;
 
 font-size:30px;
 
@@ -562,21 +562,21 @@ cursor:pointer;
 
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
 
-.menu-toggle{
+.burger
 
 display:block;
 
 }
 
-nav{
+.navbar{
 
 display:none;
 
 }
 
-nav.mobile-active{
+.navbar.active{
 
 display:block;
 
@@ -586,7 +586,7 @@ margin-top:20px;
 
 }
 
-nav.mobile-active ul{
+.navbar.active{
 
 flex-direction:column;
 
