@@ -249,7 +249,7 @@ section h2{
     display:block;
 }
 
-navbar{
+.navbar{
     position:absolute;
     top:80px;
     left:0;
@@ -257,6 +257,8 @@ navbar{
     display:none;
     background:#222;
 }
+
+.
 
 navbar.active{
     display:block;
