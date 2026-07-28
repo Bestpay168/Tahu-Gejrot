@@ -409,6 +409,17 @@ section h2{
     bottom:18px;
 
 }
+.about-box{
+    grid-template-columns:1fr;
+}
+
+.left{
+    order:1;
+}
+
+.right{
+    order:2;
+}
 
 }
 
