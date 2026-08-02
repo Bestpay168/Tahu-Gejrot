@@ -945,7 +945,4 @@ copyright.innerHTML=
    FINISH
 ====================================== */
 
-console.log(
-"TAHU GEJROT PAKDE BURUNG WEBSITE READY"
-);
 
