@@ -22,3 +22,34 @@ burger.onclick = () => {
     burger.innerHTML = "☰";
 
 };
+
+/* ======================================
+   CLOSE MENU
+====================================== */
+
+document.querySelectorAll("#navbar a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navbar.classList.remove("active");
+        burger.classList.remove("show");
+
+        if (overlay) {
+            overlay.classList.remove("show");
+        }
+
+    });
+
+});
+
+if (overlay) {
+
+    overlay.addEventListener("click", () => {
+
+        navbar.classList.remove("mobile-active");
+        burger.classList.remove("open");
+        menu-overlay.classList.remove("show");
+
+    });
+
+});
