@@ -5,7 +5,7 @@ const overlay = document.getElementById("menuOverlay");
 burger.onclick = () => {
 
     navbar.classList.toggle("active");
-    overlay.classList.toggle("show");
+    menu-overlay.classList.toggle("show");
 
     if(navbar.classList.contains("active")){
         burger.innerHTML = "✕";
@@ -44,7 +44,7 @@ document.querySelectorAll("#navbar a").forEach(link => {
 
 if (overlay) {
 
-    overlay.addEventListener("click", () => {
+    menu-overlay.addEventListener("click", () => {
 
         navbar.classList.remove("mobile-active");
         burger.classList.remove("open");
