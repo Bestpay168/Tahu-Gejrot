@@ -15,10 +15,10 @@ burger.onclick = () => {
 
 };
 
-    overlay.onclick = () => {
+    menu-overlay.onclick = () => {
 
     navbar.classList.remove("active");
-    overlay.classList.remove("show");
+    menu-overlay.classList.remove("show");
     burger.innerHTML = "☰";
 
 };
@@ -35,7 +35,7 @@ document.querySelectorAll("#navbar a").forEach(link => {
         burger.classList.remove("show");
 
         if (overlay) {
-            overlay.classList.remove("show");
+            menu-overlay.classList.remove("show");
         }
 
     });
