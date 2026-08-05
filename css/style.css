@@ -1619,3 +1619,57 @@ transition:.35s;
     border:0;
     display:block;
 }
+
+.floating-order{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+    overflow:hidden;
+    border-radius:50%;
+    animation:float 3s ease-in-out infinite;
+}
+
+.floating-order img{
+    width:80px;
+    height:80px;
+    display:block;
+    filter:drop-shadow(0 0 10px rgba(255,180,0,.8));
+    transition:transform .3s ease;
+}
+
+.floating-order:hover img{
+    transform:scale(1.1);
+}
+
+/* Kilau */
+.floating-order::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-120%;
+    width:60%;
+    height:200%;
+    background:rgba(255,255,255,.45);
+    transform:rotate(25deg);
+    animation:shine 3s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes shine{
+    from{
+        left:-120%;
+    }
+    to{
+        left:150%;
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
