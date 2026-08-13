@@ -86,7 +86,7 @@ HEADER
     padding:0 20px;
     box-sizing:border-box;
 
-    background:#1d1d1d;
+    background:transparent;
 
     z-index:1000;
 
