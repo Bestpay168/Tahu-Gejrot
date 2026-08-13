@@ -553,6 +553,34 @@ transform:translate(-50%,0);
 }
 
 }
+
+.promo-banner{
+    background:linear-gradient(90deg,#ff7a00,#ff9800);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.promo-text h3{
+    margin:0;
+    font-size:20px;
+}
+
+.promo-text p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.promo-btn{
+    background:#4caf50;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
 /* ==========================================
    STYLE.CSS
    BAGIAN 2B
