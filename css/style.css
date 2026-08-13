@@ -151,7 +151,8 @@ HEADER
     position:fixed;
     inset:0;
 
-    background:rgba(0,0,0,.5);
+    background:none!
+
 
     opacity:0;
     visibility:hidden;
