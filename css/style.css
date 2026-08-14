@@ -233,7 +233,7 @@ z-index:1002;
 
 .lang-menu button:hover{
 
-    background:#ff9800;
+    background:transparent;
 
 }
 .lang-menu.show{
@@ -329,7 +329,7 @@ z-index:1002;
 }
 
 .language-menu button:hover{
-    background:#ff9800;
+    background:transparent;
 }
 
 .arabic-text{
