@@ -879,9 +879,115 @@ copyright.innerHTML=
 
 }
 
+/* =========================================
+   PRODUCT SEARCH
+========================================= */
 
-/* ======================================
-   FINISH
-====================================== */
+/* =========================================
+   SEARCH PRODUK
+========================================= */
+
+const productSearch =
+    document.getElementById("productSearch");
+
+const clearSearch =
+    document.getElementById("clearSearch");
+
+const productCards =
+    document.querySelectorAll(".product-card");
 
 
+if (productSearch) {
+
+    productSearch.addEventListener(
+        "input",
+        function () {
+
+            const keyword =
+                this.value
+                    .toLowerCase()
+                    .trim();
+
+
+            productCards.forEach(
+                function (card) {
+
+                    const name =
+                        (
+                            card.dataset.name || ""
+                        ).toLowerCase();
+
+
+                    const category =
+                        (
+                            card.dataset.category || ""
+                        ).toLowerCase();
+
+
+                    const content =
+                        card.textContent
+                            .toLowerCase();
+
+
+                    if (
+                        name.includes(keyword) ||
+                        category.includes(keyword) ||
+                        content.includes(keyword)
+                    ) {
+
+                        card.style.display = "";
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                }
+            );
+
+
+            if (clearSearch) {
+
+                clearSearch.style.display =
+                    keyword ? "block" : "none";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   CLEAR SEARCH
+========================================= */
+
+if (clearSearch) {
+
+    clearSearch.addEventListener(
+        "click",
+        function () {
+
+            productSearch.value = "";
+
+            productCards.forEach(
+                function (card) {
+
+                    card.style.display = "";
+
+                }
+            );
+
+
+            clearSearch.style.display =
+                "none";
+
+
+            productSearch.focus();
+
+        }
+    );
+
+}
