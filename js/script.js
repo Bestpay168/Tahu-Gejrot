@@ -481,8 +481,7 @@ const heroSection = document.querySelector(".hero");
 
 const heroImages = [
     "herow.webp",
-    "images/hero2.jpg",
-    "images/hero3.jpg"
+    
 ];
 
 let currentHero = 0;
