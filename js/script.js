@@ -480,7 +480,7 @@ cards[random].style.transform=
 const heroSection = document.querySelector(".hero");
 
 const heroImages = [
-    "images/hero1.jpg",
+    "herow.webp",
     "images/hero2.jpg",
     "images/hero3.jpg"
 ];
